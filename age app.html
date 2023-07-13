@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check age</title>
+    <link rel="stylesheet" href="/">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            align-items: center;
+            margin-top: 10%;
+            text-align: left;
+        }
+
+        .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 12PX;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Check Eligibilty to vote</h1>
+        <button class="btn" id="btn" onclick="myFunction()">Try it</button>
+        <h4 id="demo"></h4>
+    </div>
+</body>
+<script>
+    function myFunction() {
+        var age = prompt("Please enter your age");
+        if (age >= 18) {
+            document.getElementById('demo').innerHTML = "You are Eligibilty for vote";
+        }
+        else if (age == null) {
+            alert("please enter the age")
+        }
+        else {
+            document.getElementById('demo').innerHTML = "You are not Eligibilty for vote yet.";
+        }
+    }
+</script>
+
+</html>
